@@ -1,19 +1,10 @@
 import { useEffect, useState } from "react";
-import { useRecoilState } from "recoil";
+import { useRecoilState, useRecoilValue } from "recoil";
 import { expenseList } from "../atoms/atoms";
+import expenseListBalance from "../selectors/selectors";
 
 function ExpenseSummary() {
-   
-   const [list, setList] = useRecoilState(expenseList);
-   const [balance, setBalance] = useState(0);
-
-   useEffect(():void => {
-      let b = 0;
-      for (let el of list)
-         b += el.cost;
-      
-      setBalance(b);
-   }, [list]);
+   const balance = useRecoilValue(expenseListBalance);
 
    return (
       <p>Current balance: {balance}</p>

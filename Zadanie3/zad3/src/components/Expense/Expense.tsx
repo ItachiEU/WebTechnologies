@@ -1,6 +1,7 @@
 import { useRecoilState } from "recoil";
-import { expenseList } from "../atoms/atoms";
-import { IExpense } from "../interfaces/interfaces";
+import { expenseList } from "../../atoms/atoms";
+import { IExpense } from "../../interfaces/interfaces";
+import classes from "./Expense.module.css";
 
 function Expense(props: IExpense) {
 
@@ -11,7 +12,7 @@ function Expense(props: IExpense) {
    }
 
    return (
-      <div>
+      <div className={classes.container}>
          <p>{props.name} {props.cost  > 0 ? "+" + props.cost:props.cost}</p> <button onClick={onClick}>Remove</button>
       </div>
    )

@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.form {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.form label {
+  margin: 1%;
+}
+
+.form input[type="text"],
+.form input[type="number"] {
+  height: 50%;
+  margin: 0.5%;
+}
+
+.form input[type="submit"] {
+  background: darkslategray;
+  margin: 0.5%;
+  color: #fff;
+}

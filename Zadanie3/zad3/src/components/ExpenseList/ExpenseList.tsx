@@ -1,14 +1,15 @@
 import { useRecoilValue } from "recoil";
-import Expense from "./Expense";
-import { expenseList } from "../atoms/atoms";
+import Expense from "../Expense/Expense";
+import { expenseList } from "../../atoms/atoms";
+import classes from "./ExpenseList.module.css";
 
-function ExpenseList() {
+function ExpenseList() {   
 
    const list = useRecoilValue(expenseList);
 
    return (
-      <div>
-         <ul>
+      <div className={classes.container}>
+         <ul className={classes.ul}>
             {
                list.map((expense) => (<Expense name={expense.name} cost={expense.cost} id={expense.id}/>))
             }

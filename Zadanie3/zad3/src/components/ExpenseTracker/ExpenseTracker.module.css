@@ -1,0 +1,8 @@
+.container {
+  margin: 3%;
+  position: relative;
+  background-color: beige;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}

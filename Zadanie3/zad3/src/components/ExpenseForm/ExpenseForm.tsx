@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useRecoilState } from "recoil";
 import { v4 } from "uuid";
-import { expenseList } from "../atoms/atoms";
+import { expenseList } from "../../atoms/atoms";
+import classes from "./ExpenseForm.module.css";
 
 function ExpenseForm() {
 
@@ -26,13 +27,15 @@ function ExpenseForm() {
    }
 
    return (
-      <form onSubmit={onClick}> 
-         <label htmlFor="nameForm">Name:</label>
-         <input type="text" id="nameForm" onChange={onChangeName} required />
-         <label htmlFor="costForm">Amount: </label>
-         <input type="number" id="costForm" onChange={onChangeCost} required />
-         <input type="submit" value="Add"/>
-      </form>
+      <div className={classes.container}>
+         <form onSubmit={onClick} className={classes.form}> 
+            <label htmlFor="nameForm">Name:</label>
+            <input type="text" id="nameForm" onChange={onChangeName} required />
+            <label htmlFor="costForm">Amount: </label>
+            <input type="number" id="costForm" onChange={onChangeCost} required />
+            <input type="submit" value="Add"/>
+         </form>
+      </div>
    );
 }
 

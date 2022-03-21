@@ -1,14 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
 import ExpenseTracker from './components/ExpenseTracker';
-  
-import {
-  RecoilRoot,
-  atom,
-  selector,
-  useRecoilState,
-  useRecoilValue,
-} from 'recoil';
+import { RecoilRoot } from 'recoil';
 
 function App() {
   return (

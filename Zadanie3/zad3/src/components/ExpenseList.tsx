@@ -1,10 +1,10 @@
-import { useRecoilState } from "recoil";
+import { useRecoilValue } from "recoil";
 import Expense from "./Expense";
 import { expenseList } from "../atoms/atoms";
 
 function ExpenseList() {
 
-   const [list, setList] = useRecoilState(expenseList);
+   const list = useRecoilValue(expenseList);
 
    return (
       <div>

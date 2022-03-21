@@ -1,6 +1,4 @@
-import { useEffect, useState } from "react";
-import { useRecoilState, useRecoilValue } from "recoil";
-import { expenseList } from "../atoms/atoms";
+import { useRecoilValue } from "recoil";
 import expenseListBalance from "../selectors/selectors";
 
 function ExpenseSummary() {

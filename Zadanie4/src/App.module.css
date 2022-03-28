@@ -1,0 +1,6 @@
+.container {
+  background-color: darkslateblue;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}

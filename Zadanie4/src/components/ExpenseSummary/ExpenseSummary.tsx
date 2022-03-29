@@ -16,6 +16,9 @@ function ExpenseSummary() {
 
    return (
       <Grid container direction="column" justifyContent="center" alignItems="center">
+         <Typography sx={{ mt: 4, mb: 2 }} variant="h4" component="div" color="blanchedalmond">
+            Expense summary
+         </Typography>
          <ExpenseList button={false} mode="all"/>
          <Typography sx={{ mt: 4, mb: 2 }} variant="h4" component="div" color={balance < 0 ? "red" : "green"}>Current balance: {balance}</Typography>
       </Grid>

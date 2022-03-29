@@ -15,6 +15,9 @@ export default function Invoices() {
 
    return (
       <Grid container direction="column" justifyContent="center" alignItems="center">
+         <Typography sx={{ mt: 4, mb: 2 }} variant="h4" component="div" color="blanchedalmond">
+            Invoices list
+         </Typography>
          <ExpenseList button={true} mode="invoice" />
          <Typography sx={{ mt: 4, mb: 2 }} variant="h4" component="div" color="blanchedalmond">
             Add a new invoice

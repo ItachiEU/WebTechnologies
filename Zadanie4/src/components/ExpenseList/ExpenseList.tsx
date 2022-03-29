@@ -11,9 +11,6 @@ function ExpenseList(props: IExpenseList) {
 
    return (
          <Grid container direction="column" justifyContent="center" alignItems="center">
-            <Typography sx={{ mt: 4, mb: 2 }} variant="h4" component="div" color="blanchedalmond">
-               Expense summary
-            </Typography>
          <List style={{width: "15%"}}>
               {
                   list.map((expense) => (
